@@ -1,3 +1,4 @@
+/* 
 package com.parcial2.modelo;
 import com.parcial2.interfaces.Magico;
 import java.util.ArrayList;
@@ -26,3 +27,4 @@ public class Mago extends Criatura implements Magico {
 
 
 }
+ */
