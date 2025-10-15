@@ -1,9 +1,9 @@
 package com.parcial2.modelo;
 
 public abstract class Criatura {
-private String nombre;
-private int salud;
-private int fuerza;
+protected String nombre;
+protected int salud;
+protected int fuerza;
 protected Arma arma;
 
 public Criatura(String nombre, int salud, int fuerza) {
@@ -19,4 +19,5 @@ public Criatura(String nombre, int salud, int fuerza) {
  public void equiparArma(Arma arma) {
     this.arma = arma;
  }
+
 }
