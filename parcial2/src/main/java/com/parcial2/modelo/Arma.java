@@ -16,4 +16,11 @@ public class Arma {
     public String getNombre() {
         return nombre;
     }
+
+    public int atacarConArma (Criatura objetivo, int fuerzaBase) {
+        int dañoTotal = fuerzaBase + daño;
+        objetivo.defender(dañoTotal);
+        System.out.println("El arma ⚔️ " + nombre + " ataca a " + objetivo.nombre + " con un daño total de " + dañoTotal);
+        return dañoTotal;
+    }
 }
