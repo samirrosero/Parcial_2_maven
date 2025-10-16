@@ -1,10 +1,10 @@
 package com.parcial2.modelo;
 
 public abstract class Criatura {
-   protected String nombre;
-   protected int salud;
-   protected int fuerza;
-   protected Arma arma;
+   public String nombre;
+   public int salud;
+   public int fuerza;
+   public Arma arma;
 
    public Criatura(String nombre, int salud, int fuerza) {
       this.nombre = nombre;
@@ -22,11 +22,11 @@ public abstract class Criatura {
 
    public void equiparArma(Arma arma) {
       this.arma = arma;
-      System.out.println(nombre + " ha equipado un arma: " + arma.getNombre());
+      System.out.println(nombre + " ha equipado un arma ⚔️: " + arma.getNombre());
    }
 
    public void desquiparArma() {
-      System.out.println(nombre + " ha desequipado el arma: " + (arma != null ? arma.getNombre() : "Ninguna"));
+      System.out.println(nombre + " ha desequipado el arma ⚔️: " + (arma != null ? arma.getNombre() : "Ninguna"));
       this.arma = null;
    }
 

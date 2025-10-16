@@ -7,17 +7,19 @@ public class Guerrero extends Criatura {
 
     @Override
     public void atacar(Criatura objetivo) {
-        int daño = fuerza;
-        if (arma != null)
-            daño += arma.getDañoAdicional();
-        System.out.println("El guerrero " + nombre + " ataca a " + objetivo.nombre + " con un daño de " + daño);
-        objetivo.defender(daño);
+        if (arma != null) {
+            System.out.println("🪖El guerrero " + nombre + " ataca con su arma " + arma.getNombre());
+            arma.atacarConArma(objetivo, fuerza);
+        } else {
+            System.out.println("🪖El guerrero "+ nombre + " ataca con las manos.");
+            objetivo.defender(fuerza);
+        }
     }
 
     @Override
     public void defender(int daño) {
         salud -= daño;
-        System.out.println("El guerrero " + nombre + " recibe " + daño + " de daño. Salud restante: " + salud);
+        System.out.println("🪖El guerrero " + nombre + " recibe " + daño + " de daño. Salud restante: " + salud);
     }
 
 }
